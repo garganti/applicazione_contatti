@@ -6,8 +6,8 @@ import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-import layer2_jooq.DataService;
-import unibg.ingsw.tables.records.IndirizziRecord;
+import contatti.jooq.DataService;
+import contatti.jooq.generated.tables.records.IndirizziRecord;
 
 /**
  * The main view contains a text field for getting the user name and a button
@@ -17,14 +17,14 @@ import unibg.ingsw.tables.records.IndirizziRecord;
 public class MainView extends VerticalLayout {
 
     public MainView() {
-    	
+
     	Grid<IndirizziRecord> grid = new Grid<>(IndirizziRecord.class, false);
     	grid.addColumn(IndirizziRecord::getNome).setHeader("First name");
     	grid.addColumn(IndirizziRecord::getNumtelefono).setHeader("telefono");
 
     	List<IndirizziRecord> people = DataService.getIndirizziRecord();
     	grid.setItems(people);
-//    	
+//
 //        // Use TextField for standard text input
 //        TextField textField = new TextField("Your name");
 //        textField.addThemeName("bordered");

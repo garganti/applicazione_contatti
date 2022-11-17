@@ -1,6 +1,5 @@
 package org.vaadin.example;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -13,6 +12,8 @@ import com.vaadin.flow.theme.AbstractTheme;
 import com.vaadin.testbench.ScreenshotOnFailureRule;
 import com.vaadin.testbench.TestBench;
 import com.vaadin.testbench.parallel.ParallelTest;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * Base class for TestBench IntegrationTests on chrome.
@@ -33,7 +34,7 @@ public abstract class AbstractViewTest extends ParallelTest {
 
     private final String route;
     private final By rootSelector;
-    
+
     @Rule
     public ScreenshotOnFailureRule rule = new ScreenshotOnFailureRule(this,
             false);
@@ -52,7 +53,8 @@ public abstract class AbstractViewTest extends ParallelTest {
         WebDriverManager.chromedriver().setup();
     }
 
-    @Before
+    @Override
+	@Before
     public void setup() throws Exception {
         if (isUsingHub()) {
             super.setup();

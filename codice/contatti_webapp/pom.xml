@@ -134,6 +134,16 @@
 			<version>3.39.4.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>contatti</groupId>
+			<artifactId>contatti_jooq</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>contatti</groupId>
+			<artifactId>contatti_db_sqlite</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

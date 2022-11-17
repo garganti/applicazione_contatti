@@ -8,26 +8,30 @@ import java.util.Collections;
 import java.util.List;
 
 import org.jooq.DSLContext;
-import org.jooq.Result;
 import org.jooq.SQLDialect;
 import org.jooq.impl.DSL;
 
 import contatti.db_sqlite.CreateDB;
-import unibg.ingsw.tables.Indirizzi;
-import unibg.ingsw.tables.records.IndirizziRecord;
+import contatti.jooq.generated.tables.Indirizzi;
+import contatti.jooq.generated.tables.records.IndirizziRecord;
 
+// classe utile per avere tutti gli indirizzi salvati
 public class DataService {
 
 	public static List<IndirizziRecord> getIndirizziRecord() {
 		Connection conn;
 		try {
 			conn = DriverManager.getConnection(CreateDB.DB_URL);
-			DSLContext create = DSL.using(conn, SQLDialect.SQLITE);	
+			DSLContext create = DSL.using(conn, SQLDialect.SQLITE);
 			return create.selectFrom(Indirizzi.INDIRIZZI).fetchInto(IndirizziRecord.class);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return Collections.EMPTY_LIST;		
+		return Collections.EMPTY_LIST;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(getIndirizziRecord());
 	}
 }

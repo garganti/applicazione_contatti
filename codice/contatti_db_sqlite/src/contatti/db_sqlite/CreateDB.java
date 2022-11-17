@@ -8,13 +8,15 @@ import java.sql.SQLException;
 
 public class CreateDB {
 
-	public static final String DB_URL = "jdbc:sqlite:D:\\AgHome\\workspaces\\didattica\\ingdelsw\\contatti.db_sqlite\\db\\indirizzi.db3";
+	public static String DB_URL = "";
 	
 	static {
-		// codice per stampare il path
-		File currentPath = new File("db/indirizzi.db3");
+		// codice per stampare il path e settarlo in modo corretto
+		File currentPath = new File("../contatti_db_sqlite/db/indirizzi.db3");
+		assert currentPath.exists();
 		try {
 			System.out.println(currentPath.getCanonicalPath());
+			DB_URL = "jdbc:sqlite:"+ currentPath.getCanonicalPath();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}		
