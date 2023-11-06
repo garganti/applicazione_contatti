@@ -1,14 +1,24 @@
-# applicazione_contatti - design + prototipo
+# applicazione contatti design dell'architettura + sviluppo del prototipo
 
-Prova di applicazione per ing. del software per gestione dei contatti. Ogni contatto è un indirizzo e un nome.
+Prova di applicazione per il corso di ing. del software per gestione dei contatti. 
 
-è un esempio di architettura a tre livelli.
+### Requisiti (breve)
 
-Il primo livello è quello dei Database layer ed è il progetto contatti_db_sqlite
+Ogni contatto è un indirizzo e un nome.
+Si vuole visualizzare i contratti ???
 
-Il secondo livello business e persistenza è il progetto  contatti_jooq
+### Specifica dei requisiti
+TODO casi d'uso etc.
 
-il terzo livello è quello di presentazione con vaadin ed è il progetto contatti_webapp
+### Architettura a tre livelli
+
+Si vuole implementare il tutto con una architettura a tre livelli.
+
+1. Il primo livello è quello dei Database layer ed è il progetto contatti_db_sqlite
+
+2. Il secondo livello business e persistenza è il progetto  contatti_jooq
+
+3. il terzo livello è quello di presentazione con vaadin ed è il progetto contatti_webapp_vaadin
 
 ## passo dopo passo
 
