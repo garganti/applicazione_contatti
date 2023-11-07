@@ -1,27 +1,24 @@
 package contatti.db_sqlite;
-import java.io.File;
+
 import java.io.IOException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class InsertInDB {
 
 	public static void main(String args[]) throws IOException {
-		File currentPath = new File("db/indirizzi.db3");
 
-		String canonicalPath = currentPath.getCanonicalPath();
-		System.out.println(canonicalPath);
-		String url = "jdbc:sqlite:" + canonicalPath;
-
-		try (Connection conn = DriverManager.getConnection(url)) {
+		try {
+			Connection conn = DriverManager.getConnection(CreateDB.DB_URL);
 			if (conn != null) {
 				Statement stmt = conn.createStatement();
-				String sql = "INSERT INTO INDIRIZZI VALUES (" + 
-								" \"ANGELO\"," + 
-								" \"ROMA\" )";
+				String sql = "INSERT INTO INDIRIZZI VALUES (" + " \"ANGELO\"," + " \"035897867\" )";
 				stmt.executeUpdate(sql);
 				stmt.close();
 				conn.close();
-				System.out.println("Table created successfully");
+				System.out.println("Utente inserito con successo");
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
