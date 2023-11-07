@@ -11,7 +11,7 @@ Tutte i dati del db (e la struttura stessa del DB) sono in un unico file (con es
 ## Come creare il progetto DB e fare delle operazioni sul DB
 
 1. creiamo un progetto java normale
-2. trasformiamo in maven ()
+2. trasformiamolo in maven
 3. aggiungiamo le dipendenze nel pom
 4. scriviamo il codice per creare il DB
 5. proviamo a fare alcune query
