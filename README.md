@@ -22,15 +22,7 @@ Si vuole implementare il tutto con una architettura a tre livelli.
 
 ## passo dopo passo
 
-### 1. progetto DB
-
-E' basato su SQLite (https://www.sqlite.org) che mantiene tutto il DB in un unico file.
-
-1. creiamo un progetto 
-2. trasformiamo in maven 
-3. aggiungiamo le dipendenze nel pom
-4. scriviamo il codice per creare il DB e fare alcune query
-5. se vogliamo possiamo vedere il DB con https://sqlitebrowser.org/
+[1. come creare il progetto db](primolivello.md)
 
 ### 2. progetto JOOQ
 E' basato su JOOQ (https://www.jooq.org/) che crea a partre da un DB le classi java per la persistenza (senza scrivere SQL)
