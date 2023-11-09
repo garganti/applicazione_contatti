@@ -2,8 +2,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>contatti</groupId>
-	<artifactId>contatti_jooq</artifactId>
+	<groupId>contatti_cli</groupId>
+	<artifactId>contatti_cli</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -12,7 +12,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<release>17</release>
+					<release>18</release>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -23,18 +23,11 @@
 			<artifactId>jooq</artifactId>
 			<version>3.18.7</version>
 		</dependency>
+		<dependency>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.39.4.0</version>
+		</dependency>
 
-		<!-- These may not be required, unless you use the GenerationTool
-manually for code generation -->
-		<dependency>
-			<groupId>org.jooq</groupId>
-			<artifactId>jooq-meta</artifactId>
-			<version>3.18.7</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jooq</groupId>
-			<artifactId>jooq-codegen</artifactId>
-			<version>3.18.7</version>
-		</dependency>
 	</dependencies>
 </project>

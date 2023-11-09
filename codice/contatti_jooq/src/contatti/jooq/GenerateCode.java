@@ -14,19 +14,14 @@ public class GenerateCode {
 
 	public static void main(String[] args) throws Exception {
 		Configuration configuration = new Configuration()
-			    .withJdbc(new Jdbc()
-			        .withDriver("org.sqlite.JDBC")
-			        .withUrl(CreateDB.DB_URL))
-			    .withGenerator(new Generator()
-			        .withDatabase(new Database()
-			            .withName("org.jooq.meta.sqlite.SQLiteDatabase")
-			            .withIncludes(".*")
-			            .withExcludes(""))
-			        .withTarget(new Target()
-			            .withPackageName("contatti.jooq.generated")
-			            .withDirectory("src-generated/")));
+				.withJdbc(new Jdbc().withDriver("org.sqlite.JDBC")
+				.withUrl(CreateDB.DB_URL))
+				.withGenerator(new Generator()
+				.withDatabase(new Database().withName("org.jooq.meta.sqlite.SQLiteDatabase").withIncludes(".*")
+				.withExcludes(""))
+				.withTarget(new Target().withPackageName("contatti.jooq.generated")
+				.withDirectory("src-generated/")));
 		GenerationTool.generate(configuration);
 	}
-
 
 }
