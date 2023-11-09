@@ -14,19 +14,13 @@ public class CreateDB {
 	public static String DB_REL_FILE = "../db/indirizzi.db3";
 	public static String DB_URL = "jdbc:sqlite:" + DB_REL_FILE;
 
-	public static void main(String[] args) throws IOException {
-		try {			
-			Connection conn = DriverManager.getConnection(DB_URL);
-			if (conn != null) {
-				DatabaseMetaData meta = conn.getMetaData();
-				System.out.println("The driver name is " + meta.getDriverName());
-				System.out.println("A new database has been created.");
-			}
-			// controllo che il file esista a questo punto
-			System.out.println("il file esiste? " + new File(DB_REL_FILE).exists());
-		} catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
+	public static void main(String[] args) throws IOException, SQLException {
+		Connection conn = DriverManager.getConnection(DB_URL);
+		DatabaseMetaData meta = conn.getMetaData();
+		System.out.println("The driver name is " + meta.getDriverName());
+		System.out.println("A new database has been created.");
+		// controllo che il file esista a questo punto
+		System.out.println("il file esiste? " + new File(DB_REL_FILE).exists());
 	}
 
 }
