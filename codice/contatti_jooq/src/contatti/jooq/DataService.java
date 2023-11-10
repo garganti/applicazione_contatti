@@ -1,6 +1,7 @@
 package contatti.jooq;
 
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -21,7 +22,7 @@ public class DataService {
 	public static List<IndirizziRecord> getIndirizziRecord() {
 		Connection conn;
 		try {
-			conn = DriverManager.getConnection(CreateDB.DB_URL);
+			conn = DriverManager.getConnection(CreateDB.DB_URL);			
 			DSLContext create = DSL.using(conn, SQLDialect.SQLITE);
 			return create.selectFrom(Indirizzi.INDIRIZZI).fetchInto(IndirizziRecord.class);
 		} catch (SQLException e) {
