@@ -8,9 +8,10 @@ import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-// con questa classe creo il DB
+// con questa classe creo il DB - è un main da eseguire almeno una volta
 public class CreateDB {
 
+	// questo è il percordo relativo del file che contiene il DB
 	public static String DB_REL_FILE = "../db/indirizzi.db3";
 	public static String DB_URL = "jdbc:sqlite:" + DB_REL_FILE;
 
