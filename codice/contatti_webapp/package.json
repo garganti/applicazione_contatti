@@ -274,7 +274,7 @@
       "workbox-core": "6.5.0",
       "workbox-precaching": "6.5.0"
     },
-    "hash": "7cd29c67f7aa0a6acfd7e67ec157ad993980bd8c27ffe78d38f54d3f56c384bf"
+    "hash": "2e58378860497d91d9ff0a71e11b465120f5c9b60907adf88fdaa8c67fb7fc3c"
   },
   "overrides": {
     "@vaadin/accordion": "$@vaadin/accordion",
