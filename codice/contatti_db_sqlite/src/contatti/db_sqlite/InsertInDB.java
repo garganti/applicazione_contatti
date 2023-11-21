@@ -14,7 +14,7 @@ public class InsertInDB {
 			Connection conn = DriverManager.getConnection(CreateDB.DB_URL);
 			if (conn != null) {
 				Statement stmt = conn.createStatement();
-				String sql = "INSERT INTO INDIRIZZI VALUES (" + " \"ANGELO\"," + " \"035897867\" )";
+				String sql = "INSERT INTO INDIRIZZI VALUES (" + " \"ANGELO\"," + " \"78787676\" )";
 				stmt.executeUpdate(sql);
 				stmt.close();
 				conn.close();
