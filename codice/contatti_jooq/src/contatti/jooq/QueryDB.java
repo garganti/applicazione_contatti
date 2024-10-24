@@ -15,11 +15,11 @@ import contatti.jooq.generated.tables.records.IndirizziRecord;
 
 public class QueryDB {
 
-	public static void main(String[] args) throws SQLException {
-		Connection conn = DriverManager.getConnection(CreateDB.DB_URL);
-		DSLContext create = DSL.using(conn, SQLDialect.SQLITE);
-		Result<IndirizziRecord> indirizzi = create.selectFrom(Indirizzi.INDIRIZZI).fetch();
-		System.out.println(indirizzi);
-	}
+    public static void main(String[] args) throws SQLException {
+	Connection conn = DriverManager.getConnection(CreateDB.DB_URL);
+	DSLContext create = DSL.using(conn, SQLDialect.SQLITE);
+	Result<IndirizziRecord> indirizzi = create.selectFrom(Indirizzi.INDIRIZZI).fetch();
+	System.out.println(indirizzi);
+    }
 
 }
