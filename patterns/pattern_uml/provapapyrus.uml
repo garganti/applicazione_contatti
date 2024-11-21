@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Codegen="http://www.eclipse.org/papyrus/Codegen/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_LKPRoKGUEe-SzNwFyz0ZZA" name="provapapyrus">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_LQwwYKGUEe-SzNwFyz0ZZA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ijyyAKGUEe-SzNwFyz0ZZA" name="Libro">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AuZLkqGZEe-eR7eAoOmLpw" name="autore" type="_6d420KGYEe-eR7eAoOmLpw" association="_AuPakKGZEe-eR7eAoOmLpw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AuZLlKGZEe-eR7eAoOmLpw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cevycKGsEe-eR7eAoOmLpw" name="titolo">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6d420KGYEe-eR7eAoOmLpw" name="Autore">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4n52gKGhEe-eR7eAoOmLpw" name="nome">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AuPakKGZEe-eR7eAoOmLpw" name="scrittore" memberEnd="_AuZLkqGZEe-eR7eAoOmLpw _AuZLlaGZEe-eR7eAoOmLpw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AuZLkKGZEe-eR7eAoOmLpw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AuZLkaGZEe-eR7eAoOmLpw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_AuZLlaGZEe-eR7eAoOmLpw" name="libro" type="_ijyyAKGUEe-SzNwFyz0ZZA" isOrdered="true" association="_AuPakKGZEe-eR7eAoOmLpw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__RU5MKGvEe-TyZyEEOssXQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FB0voKGZEe-eR7eAoOmLpw" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_2oOSMKGrEe-eR7eAoOmLpw" name="Copia"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_9J52gKGrEe-eR7eAoOmLpw" memberEnd="_9J7EoKGrEe-eR7eAoOmLpw _9J7Eo6GrEe-eR7eAoOmLpw" navigableOwnedEnd="_9J7EoKGrEe-eR7eAoOmLpw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9J6dkKGrEe-eR7eAoOmLpw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9J6dkaGrEe-eR7eAoOmLpw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9J7Eo6GrEe-eR7eAoOmLpw" name="copia" type="_2oOSMKGrEe-eR7eAoOmLpw" association="_9J52gKGrEe-eR7eAoOmLpw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LL3VYKGsEe-eR7eAoOmLpw" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9J7EoKGrEe-eR7eAoOmLpw" name="libro" type="_ijyyAKGUEe-SzNwFyz0ZZA" association="_9J52gKGrEe-eR7eAoOmLpw"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_TOHEoKGYEe-eR7eAoOmLpw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TOT48KGYEe-eR7eAoOmLpw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+  </uml:Model>
+  <Codegen:GeneratorHint xmi:id="_TUdkQKGYEe-eR7eAoOmLpw" base_Element="_LKPRoKGUEe-SzNwFyz0ZZA" generatorID="Standard Java">
+    <language xmi:type="Codegen:Language" href="pathmap://Codegen_PROFILES/languages.uml#_2Zt6YCjREeayco6FJ_OtTQ"/>
+  </Codegen:GeneratorHint>
+</xmi:XMI>
