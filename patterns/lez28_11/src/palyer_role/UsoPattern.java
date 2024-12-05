@@ -1,19 +1,22 @@
 package palyer_role;
 
-class AttendanceRole{}
+class AttendanceRole {
+}
 
-abstract class LevelRole{}
+abstract class LevelRole {
+}
 
-class FulltimeRole extends AttendanceRole{
+class FulltimeRole extends AttendanceRole {
     @Override
     public String toString() {
 	return "FULLTIME";
     }
 }
 
-class Student{
+class Studente {
     AttendanceRole attendanceRole;
     LevelRole levelRole;
+
     @Override
     public String toString() {
 	return attendanceRole.toString();
