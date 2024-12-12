@@ -1,4 +1,8 @@
+package vaccinazione.vaccini;
 import java.util.Date;
+
+import vaccinazione.base.Malattia;
+import vaccinazione.base.Persona;
 
 public class Vaccino {
 	private String codice;

@@ -1,4 +1,7 @@
+package vaccinazione.vaccini;
 import java.util.Date;
+
+import vaccinazione.base.Persona;
 
 public class Vaccinazione {
 	private Date data;
