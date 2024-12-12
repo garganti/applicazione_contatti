@@ -41,5 +41,15 @@ public class CounterTest {
 	
     }
     
+    
+    @Test
+    public void testReset() {
+	Counter c = new Counter();
+	c.inc(); c.inc();
+	
+	c.resetCounter();
+	
+	assertEquals(0, c.val);
+    }
 
 }
